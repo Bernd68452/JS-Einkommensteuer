@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkommensteuer-Rechner</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="slideshow">
+            <div class="slideshow-image"></div>
+            <div class="slideshow-image"></div>
+            <div class="slideshow-image"></div>
+            <div class="slideshow-image"></div>
+        </div>
+        <div id="h1Wrap">
+            <h1>Einkommensteuer-Rechner</h1>
+        </div>
+    </div>
+    <div id="content">
+        <div id="container">
+            <div class="card">
+                <h2>Einkommenssteuer</h2>
+                <hr>
+                <p>Steuer, die von einer Regierung direkt auf das Einkommen erhoben wird, insbesondere eine jährliche
+                    Steuer auf das persönliche Einkommen.</p>
+            </div>
+            <div class="card">
+                <p>Eine Einkommenssteuer ist eine Steuer, die Regierungen auf finanzielle Einkünfte erheben, die von
+                    allen Unternehmen in ihrem Zuständigkeitsbereich generiert werden. Laut Gesetz müssen Unternehmen
+                    und Privatpersonen jedes Jahr eine Einkommenssteuererklärung abgeben, um festzustellen, ob sie
+                    Steuern schulden oder Anspruch auf eine Steuererstattung haben. Die Einkommenssteuer ist eine
+                    wichtige Geldquelle, mit der die Regierung ihre Aktivitäten finanziert und der Öffentlichkeit dient.
+                </p>
+                <p>Die meisten Personen zahlen nicht auf ihr gesamtes Einkommen Steuern. Vielmehr bietet die BZSt eine
+                    Reihe von Abzügen an, darunter Hypothekenzinsen, einen Teil der Arzt- und Zahnarztrechnungen,
+                    Bildungsausgaben und einige andere, die die Steuerzahler von ihrem Bruttoeinkommen abziehen, um ihr
+                    zu versteuerndes Einkommen zu ermitteln.</p>
+            </div>
+            <div class="card">
+                <h3>Berechnen Sie Ihre Einkommensteuer</h3>
+                <hr>
+                <!-- Income Tax Form -->
+                <form name="incomeTaxForm" autocomplete="off">
+                    <input id="income" type="float" step="0.01" name="income" min="0" placeholder="Einkommen">
+                    <a href="#modal" class="btn btnBig" onclick="calcIncomeTax()">Enter</a>
+                    <input type="reset" name="reset" class="btn btnBig">
+                </form>
+                <!-- /Income Tax Form -->
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal" aria-hidden="true">
+            <div class="modalDialog">
+                <div class="modalBody">
+                    <a href="#" class="btnClose" aria-hidden="true">×</a>
+                    <p>Sie schulden €<span id="total"></span> in Einkommensteuer.</p>
+                </div>
+                <div class="modalFooter">
+                    <a href="#" class="btn">Schließen</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal -->
+
+
+    </div>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
